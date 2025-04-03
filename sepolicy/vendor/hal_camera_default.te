@@ -4,3 +4,5 @@ allow hal_camera_default sysfs:file { open read write };
 get_prop(hal_camera_default, drm_service_config_prop)
 get_prop(hal_camera_default, lmkd_prop)
 get_prop(hal_camera_default, vendor_sensors_debug_prop)
+get_prop(hal_camera_default, vendor_somc_camera_prop)
+get_prop(hal_camera_default, vendor_somc_thermal_prop)

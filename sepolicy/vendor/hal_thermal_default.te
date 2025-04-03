@@ -1,0 +1,10 @@
+type hal_somc_thermal_daemon, domain;
+type hal_somc_thermal_daemon_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(hal_somc_thermal_daemon)
+
+get_prop(hal_somc_thermal_daemon, hwservicemanager_prop)
+
+allow hal_somc_thermal_daemon hwservicemanager:binder { call transfer };
+allow hal_somc_thermal_daemon hal_somc_thermal_hwservice:hwservice_manager { add find };
+allow hal_somc_thermal_daemon hidl_base_hwservice:hwservice_manager add;

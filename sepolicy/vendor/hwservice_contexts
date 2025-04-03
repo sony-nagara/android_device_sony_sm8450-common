@@ -1,0 +1,2 @@
+vendor.dolby.hardware.dms::IDms          u:object_r:hal_dms_hwservice:s0
+vendor.semc.hardware.thermal::ISomcThermalEngineWrapper u:object_r:hal_somc_thermal_hwservice:s0

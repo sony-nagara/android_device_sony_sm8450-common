@@ -47,4 +47,5 @@ allow vendor_thermal-engine vendor_hal_perf_default:binder call;
 allow vendor_qti_init_shell vendor_sysfs_msm_perf:file { write };
 
 allow vendor_vppservice vendor_hal_secd_default:binder { call };
+allow vendor_vppservice vendor_hal_secd_hwservice:hwservice_manager { find };
 allow vendor_vppservice vendor_tee_listener_prop:file { getattr map open read };

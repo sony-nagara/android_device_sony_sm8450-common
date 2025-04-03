@@ -1,0 +1,2 @@
+type hal_dms_hwservice, hwservice_manager_type, protected_hwservice;
+type hal_somc_thermal_hwservice, hwservice_manager_type, protected_hwservice;

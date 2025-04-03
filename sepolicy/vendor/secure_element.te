@@ -4,6 +4,7 @@ allow hal_secure_element_default hal_secure_element_service:service_manager { ad
 allow hal_secure_element_default secure_element_device:chr_file { open read write };
 
 # allow hal_secure_element_default hal_nfc_service:service_manager find;
+# allow hal_secure_element_default hal_nfc_hwservice:hwservice_manager { find };
 
 allow hal_secure_element_default hal_nfc_default:binder { call };
 allow hal_secure_element_default vendor_nfc_prop:file { getattr map open read };
