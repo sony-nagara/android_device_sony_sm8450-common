@@ -519,7 +519,7 @@ vendor/etc/display/DPU820.xml
 vendor/etc/display/DPU830.xml
 vendor/etc/display/DPU8__.xml
 vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/displayconfig/display_id_130.xml
+vendor/etc/displayconfig/display_id_130.xml:vendor/etc/displayconfig/display_id_129.xml
 vendor/lib64/libSonyDisplayProperties.so
 
 # Display (SDM) - From Motorola sm8475-common, U1SQS34.52-21-1-10
