@@ -74,7 +74,7 @@ ro.semc.ms_type_id=PM-1380-BV
 ro.semc.product.device=CT
 ro.semc.product.model=XQ-CT54
 ro.semc.product.name=Xperia 1 IV
-ro.semc.version.sw_revision=64.2.A.2.215
+ro.semc.version.sw_revision=64.2.A.2.244
 ro.semc.version.sw_type=user
 ro.semc.version.sw_variant=GLOBALEEA-A4
 
