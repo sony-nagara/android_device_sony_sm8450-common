@@ -13,6 +13,9 @@
         <boolean name="hide_enhanced_4g_lte_bool" value="true" />
         <boolean name="disable_assisted_dialing_bool" value="true" />
     </carrier_config>
+    <carrier_config device="SO-41A" sku="jp_dcm">
+        <boolean name="hide_enhanced_4g_lte_bool" value="false" />
+    </carrier_config>
     <carrier_config sku="jp_kddi">
         <boolean name="ignore_sim_network_locked_events_bool" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
