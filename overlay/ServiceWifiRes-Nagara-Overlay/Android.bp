@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "ServiceWifiRes-Zambezi-Overlay",
+    name: "ServiceWifiRes-Nagara-Overlay",
     device_specific: true,
 }

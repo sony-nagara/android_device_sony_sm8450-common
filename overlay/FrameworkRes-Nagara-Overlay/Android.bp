@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "TetheringRRO-Zambezi",
+    name: "FrameworkRes-Nagara-Overlay",
     device_specific: true,
 }

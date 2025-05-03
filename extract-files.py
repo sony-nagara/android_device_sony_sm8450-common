@@ -18,8 +18,8 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/sony/sm6375-common',
-    'hardware/qcom-caf/sm8350',
+    'device/sony/sm8450-common',
+    'hardware/qcom-caf/sm8450',
     'hardware/qcom-caf/wlan',
     'hardware/sony',
     'vendor/qcom/opensource/commonsys-intf/display',
@@ -62,7 +62,7 @@ blob_fixups: blob_fixups_user_type = {
 
 
 module = ExtractUtilsModule(
-    'sm6375-common',
+    'sm8450-common',
     'sony',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
