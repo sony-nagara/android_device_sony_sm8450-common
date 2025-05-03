@@ -1648,7 +1648,7 @@ vendor/lib64/libta.so
 odm/bin/taimport_vendor
 odm/etc/init/taimport_vendor.rc
 vendor/bin/tad
-vendor/bin/wait4tad
+# vendor/bin/wait4tad
 
 # TFTP
 vendor/bin/tftp_server

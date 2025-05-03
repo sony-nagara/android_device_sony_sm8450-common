@@ -11,7 +11,8 @@ on init
     # SONY: Start the TrimArea Daemon. It must be started before fota-ua
     wait /dev/block/bootdevice/by-name/TA
     class_start trimarea
-    exec u:r:tad:s0 system system -- /vendor/bin/wait4tad
+    # wait4tad adds almost 10s to boot time on Nagara
+    # exec u:r:tad:s0 system system -- /vendor/bin/wait4tad
 
     setprop ro.oem.key1 ${ro.boot.hardware.sku}
 
