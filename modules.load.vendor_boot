@@ -322,5 +322,3 @@ videocc-waipio.ko
 wlan_firmware_service.ko
 zram.ko
 zsmalloc.ko
-msm_drm.ko
-msm-mmrm.ko

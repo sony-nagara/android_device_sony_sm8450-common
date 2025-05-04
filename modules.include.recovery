@@ -1,7 +1,0 @@
-adsp_loader_dlkm.ko
-apr_dlkm.ko
-focaltech_fts.ko
-q6_notifier_dlkm.ko
-q6_pdr_dlkm.ko
-sec_ts_drv.ko
-snd_event_dlkm.ko
