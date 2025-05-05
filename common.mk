@@ -194,6 +194,10 @@ PRODUCT_COPY_FILES += \
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.sony
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
