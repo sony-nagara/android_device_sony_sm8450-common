@@ -2,6 +2,12 @@
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
+audio.sys.noisy.broadcast.delay=600
+audio.sys.offload.pstimeout.secs=3
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicecomm=true
+persist.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
@@ -93,9 +99,14 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bt.bdaddr_path=/data/vendor/etc/bluetooth_bdaddr
 vendor.qcom.bluetooth.soc=hastings
 
+# Camera
+ro.camera.enableCamera1MaxZsl=1
+vendor.camera.enable.uvc=true
+vendor.mm.enable.qcom_parser=16777215
+
 # Chipset
 ro.soc.manufacturer=QTI
-ro.soc.model=SM6375
+ro.soc.model=SM8450
 
 # Crypto
 ro.crypto.dm_default_key.options_format.version=2
@@ -103,7 +114,7 @@ ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.metadata.method=dm-default-key
 
 # Display
-persist.vendor.display.pcc_matrix=0.156863,0.196078,0.000000,0.000000,0.039216,0.176471
+persist.vendor.display.pcc_matrix=0.000000,0.000000,0.000000,0.000000,0.117647,0.235294
 ro.vendor.display.cabl=0
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect_partial_fb=1
@@ -140,24 +151,23 @@ vendor.gatekeeper.disable_spu=true
 
 # Graphics
 debug.sf.disable_client_composition_cache=1
-debug.sf.high_fps_early_gl_phase_offset_ns=-1000000
-debug.sf.high_fps_early_phase_offset_ns=-1000000
+debug.sf.high_fps_early_gl_phase_offset_ns=6333333
+debug.sf.high_fps_early_phase_offset_ns=6333333
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
-debug.sf.high_fps_late_sf_phase_offset_ns=-1000000
+debug.sf.high_fps_late_sf_phase_offset_ns=6333333
 debug.sf.latch_unsignaled=0
-persist.sys.sf.color_mode=7
+persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.has_HDR_display=false
-ro.surface_flinger.has_wide_color_display=false
-ro.surface_flinger.max_frame_buffer_acquired_buffer=[3
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.max_frame_buffer_acquired_buffer=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
@@ -170,7 +180,7 @@ debug.stagefright.c2inputsurface=-1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=2.2
+ro.vendor.perf-hal.ver=2.3
 ro.vendor.perf.scroll_opt=true
 ro.vendor.qspm.enable=true
 
@@ -191,23 +201,18 @@ persist.vendor.radio.stack_id_1=1
 ro.telephony.default_network=26,26
 
 # Sensors
-persist.vendor.sensors.debug.ssc_qmi_debug=true
-persist.vendor.sensors.enable.bypass_worker=true
-persist.vendor.sensors.enable.rt_task=false
-persist.vendor.sensors.hal_trigger_ssr=false
-persist.vendor.sensors.support_direct_channel=false
-persist.vendor.sensors.sync_request=true
+persist.vendor.sensors.enable.mag_filter=true
 
 # USB
 sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=ffs
 vendor.usb.dpl.inst.name=dpl
-vendor.usb.qdss.inst.name=qdss_mdm
+vendor.usb.qdss.inst.name=qdss_sw
 vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
-vendor.usb.use_gadget_hal=0
+vendor.usb.use_gadget_hal=1
 
 # Zygote
 zygote.critical_window.minute=10
