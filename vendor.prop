@@ -34,6 +34,7 @@ vendor.audio.feature.concurrent_capture.enable=true
 vendor.audio.feature.custom_stereo.enable=true
 vendor.audio.feature.deepbuffer_as_primary.enable=false
 vendor.audio.feature.display_port.enable=true
+vendor.audio.feature.dmabuf.cma.memory.enable=true
 vendor.audio.feature.dsm_feedback.enable=false
 vendor.audio.feature.dynamic_ecns.enable=true
 vendor.audio.feature.ext_hw_plugin.enable=false
