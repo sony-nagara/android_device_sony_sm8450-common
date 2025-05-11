@@ -190,7 +190,6 @@ ro.vendor.qspm.enable=true
 persist.radio.multisim.config=dsds
 persist.vendor.radio.adb_log_on=0
 persist.vendor.radio.apm_sim_not_pwdn=1
-persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.fetchqos=true
