@@ -31,7 +31,6 @@
 # start ril-daemon only for targets on which radio is present
 #
 baseband=`getprop ro.baseband`
-sgltecsfb=`getprop persist.vendor.radio.sglte_csfb`
 datamode=`getprop persist.vendor.data.mode`
 low_ram=`getprop ro.config.low_ram`
 qcrild_status=true
@@ -92,19 +91,6 @@ case "$baseband" in
     else
         start vendor.ril-daemon
     fi
-
-    case "$baseband" in
-        "svlte2a" | "csfb")
-          start qmiproxy
-        ;;
-        "sglte" | "sglte2" )
-          if [ "x$sgltecsfb" != "xtrue" ]; then
-              start qmiproxy
-          else
-              setprop persist.vendor.radio.voice.modem.index 0
-          fi
-        ;;
-    esac
 
     multisim=`getprop persist.radio.multisim.config`
 
