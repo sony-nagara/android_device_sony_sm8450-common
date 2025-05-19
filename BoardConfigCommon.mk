@@ -76,34 +76,60 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := \
-    androidboot.hardware=qcom \
-    androidboot.memcg=1 \
-    androidboot.usbcontroller=4e00000.dwc3 \
-    cgroup.memory=nokmem,nosocket \
-    loop.max_part=7 \
-    lpm_levels.sleep_disabled=1 \
-    msm_rtb.filter=0x237 \
-    pcie_ports=compat \
-    service_locator.enable=1 \
-    swiotlb=0 \
-    ip6table_raw.raw_before_defrag=1 \
-    iptable_raw.raw_before_defrag=1
+BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 androidboot.selinux=permissive
+BOARD_BOOTCONFIG := androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_CONFIG := \
-    vendor/holi-qgki_defconfig \
-    diffconfig/common.config
+    gki_defconfig \
+    vendor/waipio_GKI.config \
+    vendor/sony/nagara.config
 TARGET_KERNEL_SOURCE := kernel/sony/sm8450
 TARGET_KERNEL_NO_GCC := true
+TARGET_NEEDS_DTBOIMAGE := true
+BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 
 # Kernel modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.vendor_dlkm))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.vendor_boot))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
-BOOT_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.include.recovery))
+BOOT_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery $(COMMON_PATH)/modules.load.vendor_boot))
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/sony/sm8450-modules
+TARGET_KERNEL_EXT_MODULES := \
+    qcom/opensource/mmrm-driver \
+    qcom/opensource/audio-kernel \
+    qcom/opensource/camera-kernel \
+    qcom/opensource/cvp-kernel \
+    qcom/opensource/dataipa/drivers/platform/msm \
+    qcom/opensource/datarmnet/core \
+    qcom/opensource/datarmnet-ext/aps \
+    qcom/opensource/datarmnet-ext/offload \
+    qcom/opensource/datarmnet-ext/shs \
+    qcom/opensource/datarmnet-ext/perf \
+    qcom/opensource/datarmnet-ext/perf_tether \
+    qcom/opensource/datarmnet-ext/sch \
+    qcom/opensource/datarmnet-ext/wlan \
+    qcom/opensource/display-drivers/msm \
+    qcom/opensource/eva-kernel \
+    qcom/opensource/video-driver \
+    qcom/opensource/wlan/qcacld-3.0/.qca6490 \
+    cirrus/kernel-modules/cs35l41/sound/soc/codecs \
+    cirrus/kernel-modules/cs40l25/drivers/misc \
+    cirrus/kernel-modules/cs40l25/sound/soc/codecs \
+    semc/hardware/camera-kernel-module/camera_sync \
+    semc/hardware/camera-kernel-module/sony_camera \
+    semc/hardware/camera-kernel-module/tcs3490 \
+    semc/hardware/camera-kernel-module/slg51000_regulator \
+    semc/hardware/charge/kernel-modules/battman_dbg \
+    semc/hardware/charge/kernel-modules/battchg_ext \
+    semc/hardware/kernel-modules/misc/bu520x1nvx \
+    semc/hardware/kernel-modules/misc/et6xx \
+    semc/hardware/kernel-modules/misc/ldo_vibrator \
+    semc/hardware/kernel-modules/msm/sec_ts \
+    semc/hardware/nfc/drivers/sn1x0_i2c \
+    semc/hardware/nfc/drivers/sn1x0_spi
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
