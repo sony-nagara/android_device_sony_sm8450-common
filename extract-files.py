@@ -53,8 +53,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so')
         .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
-    ('vendor/bin/hw/vendor.semc.hardware.secd@1.1-service', 'vendor/bin/keyprovd'): blob_fixup()
+    'vendor/bin/hw/vendor.semc.hardware.secd@1.1-service': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'vendor/bin/keyprovd': blob_fixup()
+        .add_needed('android.hardware.security.rkp-V3-ndk.so')
+	.add_needed('libbase_shim.so'),
     'vendor/bin/thermal-engine-v2': blob_fixup()
         .binary_regex_replace(b'oem/etc/thermal-engine.conf', b'odm/etc/thermal-engine.conf'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
