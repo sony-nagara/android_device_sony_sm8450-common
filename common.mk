@@ -258,10 +258,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio-service.compat
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal
