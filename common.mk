@@ -196,6 +196,7 @@ PRODUCT_ENABLE_UFFD_GC := true
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage \
     lights.sony
 
 # Lineage Health
