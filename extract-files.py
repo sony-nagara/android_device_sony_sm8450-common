@@ -62,6 +62,8 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'oem/etc/thermal-engine.conf', b'odm/etc/thermal-engine.conf'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
+    'vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so': blob_fixup()
+	.replace_needed('android.hardware.light-V1-ndk_platform.so','android.hardware.light-V1-ndk.so'),
     'vendor/etc/wfdconfig.xml': blob_fixup()
         .regex_replace('<M4Enable>0</M4Enable>', '<M4Enable>1</M4Enable>')
         .regex_replace('<UIBCValid>0</UIBCValid>', '<UIBCValid>1</UIBCValid>')
