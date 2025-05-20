@@ -188,6 +188,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.default \
+    fstab.default.vendor_ramdisk \
     init.class_main.sh \
     init.kernel.post_boot-taro.sh \
     init.kernel.post_boot.sh \
@@ -200,9 +201,6 @@ PRODUCT_PACKAGES += \
     init.sony.rc \
     init.target.rc \
     ueventd.qcom.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
