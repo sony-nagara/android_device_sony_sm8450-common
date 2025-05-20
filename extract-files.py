@@ -77,6 +77,8 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'oem/etc/thermal-engine.conf', b'odm/etc/thermal-engine.conf'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
+    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
+	.add_needed('libhidlbase_shim.so'),
     'vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so': blob_fixup()
 	.replace_needed('android.hardware.light-V1-ndk_platform.so','android.hardware.light-V1-ndk.so'),
     'vendor/etc/wfdconfig.xml': blob_fixup()
