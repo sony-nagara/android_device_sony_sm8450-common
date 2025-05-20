@@ -1,6 +1,11 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from XQ-CT72 (Customized SEA - 64.2.A.2.244).
 
+# Current libraries with ELF checks disabled:
+# libmcs depends on libagm, which is a GNU Makefile target
+# libqtigefar depends on libar-pal, which is a GNU Makefile target
+# libqc2audio_hwaudiocodec depends on libpalclient, which is a GNU Makefile target
+
 # ACDBs
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
@@ -85,8 +90,8 @@ vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
-vendor/lib64/libmcs.so
-vendor/lib64/libqtigefar.so
+vendor/lib64/libmcs.so;DISABLE_CHECKELF
+vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 
 # Audio FX modules
 vendor/lib64/soundfx/libasphere.so
@@ -889,7 +894,7 @@ vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
 vendor/lib64/libqc2audio_core.so
 vendor/lib64/libqc2audio_hooks.so
-vendor/lib64/libqc2audio_hwaudiocodec.so
+vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_CHECKELF
 vendor/lib64/libqc2audio_platform.so
 vendor/lib64/libqc2audio_swaudiocodec.so
 vendor/lib64/libqc2audio_utils.so
