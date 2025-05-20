@@ -189,10 +189,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.default \
     init.class_main.sh \
+    init.kernel.post_boot-taro.sh \
+    init.kernel.post_boot.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
     init.qcom.recovery.rc \
     init.qcom.sh \
+    init.qti.kernel.rc \
+    init.qti.kernel.sh \
     init.sony.rc \
     init.target.rc \
     ueventd.qcom.rc

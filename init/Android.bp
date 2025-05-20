@@ -24,6 +24,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.qti.kernel.rc",
+    src: "init.qti.kernel.rc",
+    sub_dir: "init/hw",
+    device_specific: true,
+}
+
+prebuilt_etc {
     name: "init.sony.rc",
     src: "init.sony.rc",
     sub_dir: "init",
@@ -51,6 +58,18 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kernel.post_boot.sh",
+    src: "init.kernel.post_boot.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-taro.sh",
+    src: "init.kernel.post_boot-taro.sh",
+    soc_specific: true,
+}
+
+sh_binary {
     name: "init.qcom.early_boot.sh",
     src: "init.qcom.early_boot.sh",
     soc_specific: true,
@@ -59,5 +78,11 @@ sh_binary {
 sh_binary {
     name: "init.qcom.sh",
     src: "init.qcom.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.sh",
+    src: "init.qti.kernel.sh",
     soc_specific: true,
 }
