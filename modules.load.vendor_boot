@@ -2,7 +2,6 @@ adsp_sleepmon.ko
 altmode-glink.ko
 arm_smmu.ko
 asix.ko
-atmel_mxt_ts.ko
 ax88179_178a.ko
 bam_dma.ko
 bcl_pmic5.ko
@@ -301,7 +300,6 @@ stm_p_basic.ko
 stm_p_ost.ko
 stub-regulator.ko
 subsystem_sleep_stats.ko
-synaptics_dsx.ko
 synx-driver.ko
 sys_pm_vx.ko
 sysmon_subsystem_stats.ko
