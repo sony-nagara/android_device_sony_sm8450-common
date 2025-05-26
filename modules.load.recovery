@@ -271,6 +271,7 @@ sched-walt.ko
 sdhci-msm.ko
 sdpm_clk.ko
 secure_buffer.ko
+sec_touchscreen.ko
 sensors_ssc.ko
 sg.ko
 shared_rail_scmi.ko
