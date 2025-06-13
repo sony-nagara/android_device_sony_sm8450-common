@@ -318,6 +318,7 @@ usb_f_gsi.ko
 usb_f_qdss.ko
 videocc-diwali.ko
 videocc-waipio.ko
+wakeup_irq_debug.ko
 wlan_firmware_service.ko
 zram.ko
 zsmalloc.ko
