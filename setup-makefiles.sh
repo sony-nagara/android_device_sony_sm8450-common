@@ -32,6 +32,7 @@ function vendor_imports() {
         "vendor/qcom/opensource/dataservices",
         "vendor/qcom/opensource/display",
         "vendor/sony/pdx223",
+        "vendor/sony/pdx224",
         "vendor/sony/sm8450-common",
 EOF
 }
