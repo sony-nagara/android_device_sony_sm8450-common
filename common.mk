@@ -350,6 +350,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_ODM)/etc/thermal-engine.conf
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.sony
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
