@@ -4,6 +4,38 @@
 //
 
 filegroup {
+    name: "proprietary_rildb_other_sql_files",
+    srcs: [
+        "other/0_initial_qcrilnr.sql",
+        "other/1_version_intro_qcrilnr.sql",
+        "other/2_version_add_wps_config_qcrilnr.sql",
+        "other/3_version_update_wps_config_qcrilnr.sql",
+        "other/4_version_update_ecc_table_qcrilnr.sql",
+        "other/5_version_update_ecc_table_qcrilnr.sql",
+        "other/6_version_change_property_table_qcrilnr.sql",
+        "other/7_version_update_ecc_table_qcrilnr.sql",
+        "other/8_version_update_ecc_table.sql",
+        "other/9_version_update_ecc_table.sql",
+        "other/10_version_update_ecc_table.sql",
+        "other/11_version_update_ecc_table.sql",
+        "other/12_version_update_ecc_table.sql",
+    ],
+}
+
+filegroup {
+    name: "proprietary_rildb_config_sql_files",
+    srcs: [
+        "config/6.0_config.sql",
+        "config/7.0_config.sql",
+        "config/8.0_config.sql",
+        "config/9.0_config.sql",
+        "config/10.0_config.sql",
+        "config/11.0_config.sql",
+        "config/12.0_config.sql",
+    ],
+}
+
+filegroup {
     name: "rildb_config_sql_files",
     srcs: [
         "config/12.1_config.sql",
@@ -14,8 +46,8 @@ genrule {
     name: "qcril_config_database",
     enabled: true,
     srcs: [
-        "//vendor/sony/sm8450-common:proprietary_rildb_other_sql_files",
-        "//vendor/sony/sm8450-common:proprietary_rildb_config_sql_files",
+        ":proprietary_rildb_other_sql_files",
+        ":proprietary_rildb_config_sql_files",
         ":rildb_config_sql_files",
     ],
     tools: [
@@ -32,6 +64,26 @@ prebuilt_etc {
     relative_install_path: "qcril_database",
     vendor: true,
     required: [
+        "6.0_config.sql",
+        "7.0_config.sql",
+        "8.0_config.sql",
+        "9.0_config.sql",
+        "10.0_config.sql",
+        "11.0_config.sql",
+        "12.0_config.sql",
         "12.1_config.sql",
+        "0_initial_qcrilnr.sql",
+        "1_version_intro_qcrilnr.sql",
+        "2_version_add_wps_config_qcrilnr.sql",
+        "3_version_update_wps_config_qcrilnr.sql",
+        "4_version_update_ecc_table_qcrilnr.sql",
+        "5_version_update_ecc_table_qcrilnr.sql",
+        "6_version_change_property_table_qcrilnr.sql",
+        "7_version_update_ecc_table_qcrilnr.sql",
+        "8_version_update_ecc_table.sql",
+        "9_version_update_ecc_table.sql",
+        "10_version_update_ecc_table.sql",
+        "11_version_update_ecc_table.sql",
+        "12_version_update_ecc_table.sql",
     ],
 }
