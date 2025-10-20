@@ -66,7 +66,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 #   https://github.com/LineageOS/android_device_sony_sm8550-common/commit/c7c327186b7a0a654851053b0ca5122e9a85d23c
 
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
-TARGET_NEEDS_DTBOIMAGE := true
+#TARGET_NEEDS_DTBOIMAGE := true
 
 # TODO: limit dtbs inclusion
 #   https://github.com/LineageOS/android_device_sony_sm8550-common/commit/c4c8891f4c3130a7bd2faaa7e7045b85cfce9c04
